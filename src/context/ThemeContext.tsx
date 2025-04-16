@@ -6,13 +6,20 @@ import {
   useEffect,
 } from 'react'
 
-const ThemeContext = createContext({
+interface ThemeContextType {
+  isDarkMode: boolean
+  toggleTheme: () => void
+}
+const ThemeContext = createContext<ThemeContextType>({
   isDarkMode: false,
   toggleTheme: () => {},
 })
+interface ThemeProviderProps {
+  children: ReactNode
+}
 
-export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
 
   useEffect(() => {
     const savedTheme =
@@ -26,7 +33,7 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [])
 
-  const toggleTheme = useCallback(() => {
+  const toggleTheme = useCallback((): void => {
     if (isDarkMode) {
       document.documentElement.setAttribute('data-theme', 'light')
       localStorage.setItem('theme', 'light')
@@ -44,4 +51,4 @@ export const ThemeProvider = ({ children }) => {
   )
 }
 
-export const useTheme = () => useContext(ThemeContext)
+export const useTheme = (): ThemeContextType => useContext(ThemeContext)

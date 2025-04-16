@@ -2,7 +2,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import ThemeToggle from './components/ThemeToggle'
 import Counter from './components/Counter.tsx'
 
-export const App = () => {
+export const App: FC = () => {
   return (
     <ThemeProvider>
       <div className="app">

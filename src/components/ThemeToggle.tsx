@@ -1,6 +1,6 @@
 import { useTheme } from '../context/ThemeContext.tsx'
 
-const ThemeToggle = () => {
+const ThemeToggle: FC = () => {
   const { isDarkMode, toggleTheme } = useTheme()
 
   return (
