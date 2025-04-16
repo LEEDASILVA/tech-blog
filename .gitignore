@@ -50,33 +50,8 @@ typings/
 # Build directories
 *.map
 .redeployment.log
-static/public/admin.html
-static/public/assets/js/admin
-static/public/assets/js/code-editor
-static/public/assets/js/design
-static/public/assets/js/docs
-static/public/assets/js/exam
-static/public/assets/js/games
-static/public/assets/js/games-admin
-static/public/assets/js/home
-static/public/assets/js/intra
-static/public/assets/js/preview
-static/public/assets/js/toad
-static/public/assets/js/toad-admin
-static/public/code-editor.html
-static/public/docs.html
-static/public/error404.html
-static/public/exam.html
-static/public/games-admin.html
-static/public/games.html
-static/public/home.html
-static/public/intra.html
-static/public/maintenance.html
-static/public/preview.html
-static/public/public
-static/public/toad-admin.html
-static/public/toad.html
-static/lib/attrs-descriptions.js
+
+public/dist
 chunk-*.js
 
 # Files autosaved by emacs
@@ -100,4 +75,3 @@ backup
 *.zip
 .env
 .vscode/settings.json
-
