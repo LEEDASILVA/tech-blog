@@ -11,8 +11,8 @@
   --color-secondary: #2c7a7b;
   --color-accent: #f97316;
   --color-accent-secondary: #4fd1c5;
-  --color-light-gray: #f7fafc;
-  --color-gray: #e2e8f0;
+  --color-light-gray: #e3e3e3;
+  --color-gray: #d6d6d6;
   --color-dark-gray: #4a5568;
 }
 
@@ -30,7 +30,7 @@
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", monospace;
   font-weight: 300;
   font-size: 16px;
   background-color: var(--color-bg);
