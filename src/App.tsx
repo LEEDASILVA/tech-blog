@@ -3,7 +3,7 @@ export const App: FC = () => {
     <div className="app">
       <main style={{ padding: '20px' }}>
         <h2 style={{ color: 'var(--color-secondary)' }}>Welcome</h2>
-        <p>This is an example of using CSS variables for theming.</p>
+        <p>This is where you will find information about me.</p>
 
         <div
           style={{
@@ -14,7 +14,7 @@ export const App: FC = () => {
           }}
         >
           <h3>Featured Article</h3>
-          <p>Some components that adapts to the theme.</p>
+          <p>Some different Articles or Pages in the Grimoire hehe.</p>
           <button
             type="button"
             style={{

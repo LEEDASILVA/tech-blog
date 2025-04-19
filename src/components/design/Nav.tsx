@@ -4,6 +4,7 @@ import Logo from '../design/Logo.tsx'
 import { Menu, X } from '../design/Icons.tsx'
 import { TabletOrMobile, Desktop } from '../Responsive.tsx'
 import { Drawer } from '../design/Drawer.tsx'
+import { useNavigate } from 'react-router-dom'
 
 const pages = [
   { label: 'Blog', href: '/blog' },
@@ -12,6 +13,7 @@ const pages = [
 ]
 const Nav: FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
+  const navigate = useNavigate()
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -33,16 +35,21 @@ const Nav: FC = () => {
           justifyContent: 'space-between',
         }}
       >
-        <div
+        <button
+          type="button"
+          onClick={() => navigate('/')}
           style={{
+            cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             height: '4rem',
+            background: 'none',
+            border: 'none',
           }}
         >
           <Logo />
-        </div>
+        </button>
         <div
           style={{
             display: 'flex',
