@@ -132,6 +132,15 @@ export const App: FC = () => {
               redirect="/"
               categories={{tools: `🛠️ Development Tools`}}
             />
+            <Card
+              title="🧙 Animation Sorcery (TO COME)"
+              description={`A powerful incantation for bringing web elements to life through the mystical arts of Anime.js. This spell enables the practitioner to craft smooth, sophisticated animations with minimal effort, transforming static web pages into dynamic, engaging experiences.`}
+              redirect="/"
+              categories={{
+                frontend: `🖥️ Frontend Enchantments`,
+                tools: `🛠️ Development Tools`
+              }}
+            />
            </div>
         </div>
       </main>
