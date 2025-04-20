@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom'
 
 const pages = [
   { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 const Nav: FC = () => {
