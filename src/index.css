@@ -6,12 +6,14 @@
 :root {
   /* light theme */
   --color-bg: #ffffff;
+  --color-bg-code-editor: #f9f9f9;
+  --color-bg-code: #f6f8fa;
   --color-text: #1a365d;
   --color-primary: #1a365d;
   --color-secondary: #2c7a7b;
   --color-accent: #f97316;
   --color-accent-secondary: #4fd1c5;
-  --color-light-gray: #e3e3e3;
+  --color-light-gray: #dbded8;
   --color-gray: #d6d6d6;
   --color-dark-gray: #4a5568;
 }
@@ -19,6 +21,8 @@
 /* dark theme */
 [data-theme="dark"] {
   --color-bg: #1a202c;
+  --color-bg-code-editor: #1a202c;
+  --color-bg-code: #2d3748;
   --color-text: #f7fafc;
   --color-primary: #2c7a7b;
   --color-secondary: #4fd1c5;
@@ -97,7 +101,7 @@ ul li::before {
     box-shadow 0.2s ease;
 }
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .card-title {
@@ -142,4 +146,62 @@ ul li::before {
     width: 100%;
     align-self: center;
   }
+}
+.code-editor {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.code-editor.light {
+  background-color: var(--color-bg-code-editor);
+  border-color: #cbd5e0;
+}
+
+.code-editor.dark {
+  background-color: var(--color-bg-code-editor);
+  border-color: #2d3748;
+}
+
+.code-editor-header {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-bottom: 1px solid;
+}
+
+.code-editor.light .code-editor-header {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-code);
+  border-color: #e2e8f0;
+}
+
+.code-editor.dark .code-editor-header {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-code);
+  border-color: #4a5568;
+}
+
+pre {
+  background-color: var(--color-bg-code);
+  color: var(--color-text);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 0 0 1px var(--color-light-gray) inset;
+}
+
+code {
+  color: var(--color-text);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.95rem;
 }

@@ -2,14 +2,14 @@ import Header from './components/design/Header.tsx'
 import Card from './components/design/Card.tsx'
 import { useResponsive } from './context/ResponsiveContext.tsx'
 
-const categories = {
-  frontend: `🖥️ Frontend Enchantments`,
-  backend: `⚙️  Backend Conjurations`,
-  devops: `🔧 DevOps Rituals`,
-  tools: `🛠️ Development Tools`,
-  securaty: `🔐 Security Wards`,
-  algorithms : `🧠 Algorithms & Data Structures`
-}
+//const categories = {
+//  frontend: `🖥 Frontend Enchantments`,
+//  backend: `⚙  Backend Conjurations`,
+//  devops: `🔧 DevOps Rituals`,
+//  tools: `🛠 Development Tools`,
+//  securaty: `🔐 Security Wards`,
+//  algorithms : `🧠 Algorithms & Data Structures`
+//}
 
 const Section: FC<{
   description: string
@@ -31,7 +31,7 @@ const Section: FC<{
   )
 }
 
-export const App: FC = () => {
+const Home: FC = () => {
   const { isMobile, isTablet } = useResponsive()
 
   return (
@@ -102,8 +102,8 @@ export const App: FC = () => {
               redirect="/"
               categories={{
                 devops: `🔧 DevOps Rituals`,
-                backend: `⚙️  Backend Conjurations`,
-                tools: `🛠️ Development Tools`,
+                backend: `⚙  Backend Conjurations`,
+                tools: `🛠 Development Tools`,
               }}
             />
             <Card
@@ -111,39 +111,41 @@ export const App: FC = () => {
               description={`A robust authentication system is the gatekeeper of your application. This spell provides a secure, scalable authentication implementation for backend services, covering user registration, login flows, password management.`}
               redirect="/"
               categories={{
-                backend: `⚙️  Backend Conjurations`,
-                frontend: `🖥️ Frontend Enchantments`,
+                backend: `⚙  Backend Conjurations`,
+                frontend: `🖥 Frontend Enchantments`,
                 securaty: `🔐 Security Wards`,
-                algorithms : `🧠 Algorithms & Data Structures`
+                algorithms: `🧠 Algorithms & Data Structures`,
               }}
             />
             <Card
               title="📜 Codemirror framework (TO COME)"
               description={`State management across React and Codemirror.`}
-              redirect="/"
+              redirect="/blog/codemirror"
               categories={{
-                algorithms : `🧠 Algorithms & Data Structures`,
-                frontend: `🖥️ Frontend Enchantments`,
+                algorithms: `🧠 Algorithms & Data Structures`,
+                frontend: `🖥 Frontend Enchantments`,
               }}
             />
             <Card
               title="🧙 How to use git command (TO COME)"
               description={`Common and daily use of git commands.`}
               redirect="/"
-              categories={{tools: `🛠️ Development Tools`}}
+              categories={{ tools: `🛠 Development Tools` }}
             />
             <Card
               title="🧙 Animation Sorcery (TO COME)"
               description={`A powerful incantation for bringing web elements to life through the mystical arts of Anime.js. This spell enables the practitioner to craft smooth, sophisticated animations with minimal effort, transforming static web pages into dynamic, engaging experiences.`}
               redirect="/"
               categories={{
-                frontend: `🖥️ Frontend Enchantments`,
-                tools: `🛠️ Development Tools`
+                frontend: `🖥 Frontend Enchantments`,
+                tools: `🛠 Development Tools`,
               }}
             />
-           </div>
+          </div>
         </div>
       </main>
     </div>
   )
 }
+
+export default Home
