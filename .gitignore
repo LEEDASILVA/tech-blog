@@ -4,6 +4,8 @@
 # dist folders
 dist/*
 
+!dist/index.html
+
 !dist/static/
 dist/static/*
 

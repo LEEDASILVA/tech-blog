@@ -10,7 +10,7 @@ const handleRequest = async request => {
       <App />
     </StaticRouter>,
     {
-      bootstrapModules: [`/static/index.js`], // Reference the bundled JS
+      bootstrapModules: [`/static/index.js`],
       onShellReady() {
         const headers = {
           'Content-Type': 'text/html',
