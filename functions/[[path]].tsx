@@ -1,10 +1,12 @@
-import { renderToReadableStream } from 'react-dom/server';
-import { StaticRouter } from 'react-router';
-import App from '../../src/app/App';
+/** @jsxImportSource react */
 
-export const onRequestGet: PagesFunction = async (context) => {
-  const { request } = context;
-  const url = new URL(request.url);
+import { renderToReadableStream } from 'react-dom/server'
+import { StaticRouter } from 'react-router'
+import App from '../src/app/App.tsx'
+
+export const onRequestGet: PagesFunction = async context => {
+  const { request } = context
+  const url = new URL(request.url)
 
   const stream = await renderToReadableStream(
     <html lang="en">
@@ -22,18 +24,17 @@ export const onRequestGet: PagesFunction = async (context) => {
             <App />
           </StaticRouter>
         </div>
-        <script type="module" src="/static/index.js"></script>
+        <script type="module" src="/static/index.js" />
       </body>
     </html>,
     {
       bootstrapScripts: ['/static/index.js'],
-    }
-  );
+    },
+  )
 
   return new Response(stream, {
     headers: {
       'Content-Type': 'text/html',
     },
-  });
-};
-
+  })
+}
