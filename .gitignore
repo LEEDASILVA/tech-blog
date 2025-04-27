@@ -6,6 +6,7 @@ dist/*
 
 !dist/static/
 dist/static/*
+
 # Un-ignore favicon.png
 !dist/static/favicon.png
 
