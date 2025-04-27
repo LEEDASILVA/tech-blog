@@ -3,14 +3,14 @@ import path from 'node:path'
 
 const workspace = process.cwd()
 const blogsPath = path.join(workspace, 'src', 'app', 'blogs')
-const publicPath = path.join(workspace, 'public')
+const distPath = path.join(workspace, 'dist', 'static')
 
 export const copyMdFiles = () => {
   const files = fs.readdirSync(blogsPath)
 
   for (const file of files) {
     const src = path.join(blogsPath, file)
-    const dest = path.join(publicPath, file)
+    const dest = path.join(distPath, file)
 
     if (file.endsWith('.md')) {
       fs.copyFileSync(src, dest)

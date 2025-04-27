@@ -5,7 +5,7 @@ const Codemirror = () => {
   const [md, setMd] = useState()
 
   useEffect(() => {
-    fetch('/CODEMIRROR.md')
+    fetch('/static/CODEMIRROR.md')
       .then(res => res.text())
       .then(setMd)
       .catch(err => setMarkdown(`Error loading markdown: ${err}`))
